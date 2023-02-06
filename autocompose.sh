@@ -15,7 +15,16 @@ fi
 if ! command -v composerize &> /dev/null
 then
     echo "composerize could not be found or is not installed"
-    exit
+    echo "Do you want to install composerize automatically (y/N)"
+	read choice
+	if [ "$choice" = "y" ]
+		then
+			sudo npm install composerize -g
+		else
+			echo "Please manually install composerize"
+			echo "More Information on how to install is on it's Github page."
+			exit 0
+	fi
 fi
 
 
