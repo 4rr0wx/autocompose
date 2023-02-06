@@ -8,3 +8,5 @@ Depencies:
 Usage:
 autocompose
 Then follow prompted steps
+
+For help use: autocompose -h
