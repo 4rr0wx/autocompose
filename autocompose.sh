@@ -12,6 +12,13 @@ if [ "$1" = "-h" ] || [ "$1" = "-help" ]
 	exit 0
 fi
 
+if ! command -v composerize &> /dev/null
+then
+    echo "composerize could not be found or is not installed"
+    exit
+fi
+
+
 echo "Please enter the Docker run command (including \"docker run\"):"
 read docker_run
 
