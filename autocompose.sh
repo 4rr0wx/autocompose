@@ -43,7 +43,7 @@ if [ "$choice" = "y" ]
 then
 	sudo docker-compose up
 else
-	echo "Nothing was started"
+	echo "Compose File generated but it hasn't been startet yet!"
 	echo "Script will now exit"
 	exit 0
 fi
