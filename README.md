@@ -4,6 +4,7 @@ A small script that converts a docker run command to a docker-compose file based
 
 Depencies:
 - composerize
+-    npm (if composerize is not installed)
 
 Usage:
 autocompose
