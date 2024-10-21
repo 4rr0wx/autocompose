@@ -31,7 +31,10 @@ fi
 echo "Please enter the Docker run command (including \"docker run\"):"
 read docker_run
 
-composerize "$docker_run" 1> "./docker-compose.yml"
+if ! composerize "$docker_run" 1> "./docker-compose.yml"; then
+    echo "Error: The docker run command is incorrectly formatted. Please check the command and try again."
+    exit 1
+fi
 
 echo "Following Compose File has been created:"
 cat docker-compose.yml
@@ -47,4 +50,3 @@ else
 	echo "Script will now exit"
 	exit 0
 fi
-
